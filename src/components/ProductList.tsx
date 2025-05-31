@@ -58,6 +58,10 @@ export default function ProductList() {
     loadProducts();
   }, [page, selectedCategory]);
 
+  useEffect(() => {
+    setPage(0);
+  }, [selectedCategory]);
+
   return (
     <div>
       <Filters
